@@ -1,0 +1,53 @@
+name: Deploy Static Website to Nginx (EC2)
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: 22
+          script: |
+            set -e
+
+            # === CHANGE THESE ===
+            REPO_URL="https://github.com/${{ github.repository }}.git"
+            APP_DIR="/home/ubuntu/websites/basic-site"
+            WEB_ROOT="/var/www/html"
+            BRANCH="main"
+
+            echo "==> Preparing app directory: $APP_DIR"
+            mkdir -p "$APP_DIR"
+
+            if [ ! -d "$APP_DIR/.git" ]; then
+              echo "==> Cloning repository..."
+              git clone --branch "$BRANCH" "$REPO_URL" "$APP_DIR"
+            else
+              echo "==> Pulling latest changes..."
+              cd "$APP_DIR"
+              git fetch --all
+              git reset --hard "origin/$BRANCH"
+            fi
+
+            echo "==> Deploying to Nginx web root: $WEB_ROOT"
+            # Clean web root, then copy fresh files
+            rm -rf "$WEB_ROOT"/*
+            cp -r "$APP_DIR"/* "$WEB_ROOT"/
+
+            # Ensure ownership is ubuntu (as you said folder owner is ubuntu)
+            sudo chown -R ubuntu:ubuntu "$WEB_ROOT"
+
+            echo "==> Reloading Nginx"
+            sudo nginx -t
+            sudo systemctl reload nginx
+
+            echo "✅ Deployment complete!"
