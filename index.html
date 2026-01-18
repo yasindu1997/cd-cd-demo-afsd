@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artificial Intelligence — Overview</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <header class="header">
+      <div class="container nav">
+        <a class="brand" href="#top">
+          <span class="brand-dot"></span>
+          <span>AI Explorer</span>
+        </a>
+
+        <button class="icon-btn" id="menuBtn" aria-label="Toggle menu">
+          <span class="icon-line"></span>
+          <span class="icon-line"></span>
+          <span class="icon-line"></span>
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#types">Types</a>
+          <a href="#usecases">Use Cases</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#demo">Demo</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="chip" id="themeBtn" type="button" aria-label="Toggle theme">
+            🌙 Dark
+          </button>
+          <a class="btn" href="#demo">Try Demo</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <p class="kicker">Artificial Intelligence</p>
+            <h1>
+              Understand AI in a simple way — from
+              <span class="grad">basics</span> to real-world impact.
+            </h1>
+            <p class="lead">
+              AI is a branch of computer science that enables machines to learn from data,
+              recognize patterns, and make decisions. Explore concepts, examples, and a mini demo.
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn" href="#about">Start Learning</a>
+              <a class="btn ghost" href="#usecases">See Use Cases</a>
+            </div>
+
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-num">3</div>
+                <div class="stat-label">AI Categories</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">7+</div>
+                <div class="stat-label">Use Cases</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">1</div>
+                <div class="stat-label">Interactive Demo</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="card hero-card">
+              <div class="card-header">
+                <h3>AI in one line</h3>
+                <span class="badge">Simple</span>
+              </div>
+              <p>
+                AI = software that can “learn” from examples, then use what it learned to
+                solve problems like predictions, recommendations, or understanding language.
+              </p>
+
+              <div class="pill-grid">
+                <span class="pill">Machine Learning</span>
+                <span class="pill">Deep Learning</span>
+                <span class="pill">NLP</span>
+                <span class="pill">Computer Vision</span>
+                <span class="pill">Robotics</span>
+                <span class="pill">Generative AI</span>
+              </div>
+
+              <div class="hero-mini">
+                <div class="spark"></div>
+                <div>
+                  <p class="mini-title">Tip</p>
+                  <p class="mini-text">
+                    AI is not “magic”. It’s math + data + computing power.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card hero-card2">
+              <div class="ai-wave" aria-hidden="true"></div>
+              <p class="muted">
+                Explore: What AI is, types of AI, where it’s used, and how it shapes the future.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>What is Artificial Intelligence?</h2>
+            <p>
+              Artificial Intelligence is the ability of a computer system to perform tasks
+              that normally require human intelligence.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card">
+              <h3>Learning</h3>
+              <p class="muted">
+                AI learns patterns from examples (data) and improves over time.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Reasoning</h3>
+              <p class="muted">
+                AI can make decisions using rules, probabilities, and models.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Perception</h3>
+              <p class="muted">
+                AI can interpret images, speech, and text (vision + NLP).
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TYPES -->
+      <section class="section alt" id="types">
+        <div class="container">
+          <div class="section-title">
+            <h2>Types of AI (simple)</h2>
+            <p>These categories help explain AI capabilities in real life.</p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card">
+              <h3>Narrow AI</h3>
+              <p class="muted">
+                Specialized for one task (e.g., face unlock, spam filtering).
+              </p>
+              <ul class="list">
+                <li>Most AI today</li>
+                <li>Fast & accurate on specific tasks</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>General AI</h3>
+              <p class="muted">
+                Human-level intelligence across many tasks (still not achieved).
+              </p>
+              <ul class="list">
+                <li>Flexible problem solving</li>
+                <li>Research goal</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Superintelligent AI</h3>
+              <p class="muted">
+                Smarter than humans in most areas (theoretical).
+              </p>
+              <ul class="list">
+                <li>Discussed in ethics & safety</li>
+                <li>Not real today</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- USE CASES -->
+      <section class="section" id="usecases">
+        <div class="container">
+          <div class="section-title">
+            <h2>Real-world use cases</h2>
+            <p>AI is everywhere — from your phone to hospitals and businesses.</p>
+          </div>
+
+          <div class="usecase-grid">
+            <div class="usecase card">
+              <div class="usecase-icon">🧠</div>
+              <div>
+                <h3>Chatbots & Assistants</h3>
+                <p class="muted">Answer questions, summarize, translate, help customers.</p>
+              </div>
+            </div>
+
+            <div class="usecase card">
+              <div class="usecase-icon">📷</div>
+              <div>
+                <h3>Computer Vision</h3>
+                <p class="muted">Face detection, quality control, medical imaging analysis.</p>
+              </div>
+            </div>
+
+            <div class="usecase card">
+              <div class="usecase-icon">🎯</div>
+              <div>
+                <h3>Recommendations</h3>
+                <p class="muted">YouTube/Netflix suggestions, shopping personalization.</p>
+              </div>
+            </div>
+
+            <div class="usecase card">
+              <div class="usecase-icon">🏥</div>
+              <div>
+                <h3>Healthcare</h3>
+                <p class="muted">Predict risks, support diagnosis, optimize workflows.</p>
+              </div>
+            </div>
+
+            <div class="usecase card">
+              <div class="usecase-icon">🏦</div>
+              <div>
+                <h3>Fraud Detection</h3>
+                <p class="muted">Detect suspicious transactions and patterns.</p>
+              </div>
+            </div>
+
+            <div class="usecase card">
+              <div class="usecase-icon">🚗</div>
+              <div>
+                <h3>Smart Transport</h3>
+                <p class="muted">Traffic prediction, driver assistance, route optimization.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIMELINE -->
+      <section class="section alt" id="timeline">
+        <div class="container">
+          <div class="section-title">
+            <h2>Mini timeline</h2>
+            <p>A few milestones that shaped AI.</p>
+          </div>
+
+          <div class="timeline">
+            <div class="t-item">
+              <div class="t-dot"></div>
+              <div class="t-content card">
+                <h3>1950 — Turing Test</h3>
+                <p class="muted">A way to measure if a machine can mimic human conversation.</p>
+              </div>
+            </div>
+
+            <div class="t-item">
+              <div class="t-dot"></div>
+              <div class="t-content card">
+                <h3>1997 — Deep Blue</h3>
+                <p class="muted">IBM’s chess system defeated world champion Garry Kasparov.</p>
+              </div>
+            </div>
+
+            <div class="t-item">
+              <div class="t-dot"></div>
+              <div class="t-content card">
+                <h3>2012 — Deep Learning boom</h3>
+                <p class="muted">Big improvements in image recognition using neural networks.</p>
+              </div>
+            </div>
+
+            <div class="t-item">
+              <div class="t-dot"></div>
+              <div class="t-content card">
+                <h3>Today — Generative AI</h3>
+                <p class="muted">Models generate text, images, code, audio, and more.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DEMO -->
+      <section class="section" id="demo">
+        <div class="container">
+          <div class="section-title">
+            <h2>Try a tiny AI-style demo</h2>
+            <p>Type a sentence. This demo “classifies” sentiment (rule-based, for learning).</p>
+          </div>
+
+          <div class="card demo">
+            <div class="demo-grid">
+              <div>
+                <label class="label" for="demoText">Your text</label>
+                <textarea
+                  id="demoText"
+                  class="input"
+                  rows="5"
+                  placeholder="Example: This course is amazing and super helpful!"
+                ></textarea>
+
+                <div class="demo-actions">
+                  <button class="btn" id="analyzeBtn" type="button">Analyze</button>
+                  <button class="btn ghost" id="clearBtn" type="button">Clear</button>
+                </div>
+              </div>
+
+              <div class="demo-result">
+                <p class="label">Result</p>
+                <div class="result-box" id="resultBox">
+                  <p class="result-title" id="resultTitle">Waiting...</p>
+                  <p class="muted" id="resultDesc">
+                    Enter a sentence and click Analyze.
+                  </p>
+                </div>
+
+                <div class="chips">
+                  <span class="chip small" id="wordCountChip">Words: 0</span>
+                  <span class="chip small" id="scoreChip">Score: 0</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="note muted">
+              Note: Real AI models learn from lots of data. This example uses keyword scoring.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section alt" id="faq">
+        <div class="container">
+          <div class="section-title">
+            <h2>FAQ</h2>
+            <p>Quick answers about AI.</p>
+          </div>
+
+          <div class="faq">
+            <button class="faq-q" type="button">
+              Is AI the same as Machine Learning?
+              <span class="chev">▾</span>
+            </button>
+            <div class="faq-a">
+              <p class="muted">
+                AI is the big field. Machine Learning is a part of AI where systems learn from data.
+              </p>
+            </div>
+
+            <button class="faq-q" type="button">
+              Do I need strong math to learn AI?
+              <span class="chev">▾</span>
+            </button>
+            <div class="faq-a">
+              <p class="muted">
+                Basics help, but you can start with concepts + projects first, then learn math step-by-step.
+              </p>
+            </div>
+
+            <button class="faq-q" type="button">
+              Where is AI used the most?
+              <span class="chev">▾</span>
+            </button>
+            <div class="faq-a">
+              <p class="muted">
+                Search engines, recommendations, healthcare, finance, security, and automation tools.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container footer-grid">
+          <div>
+            <div class="brand footer-brand">
+              <span class="brand-dot"></span>
+              <span>AI Explorer</span>
+            </div>
+            <p class="muted">
+              A simple educational website about Artificial Intelligence.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#usecases">Use Cases</a>
+            <a href="#demo">Demo</a>
+            <a href="#top">Back to top ↑</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
